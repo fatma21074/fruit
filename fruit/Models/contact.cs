@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace fruit.Models
 {
@@ -11,5 +12,8 @@ namespace fruit.Models
         public string Name { get; set; }
         public string Email { get; set; }
         public string message { get; set; }
+        [ForeignKey("Accountsnum")]
+        public int phonenum { get; set; }
+        public Accounts accounts { get; set; }
     }
 }
