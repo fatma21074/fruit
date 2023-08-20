@@ -16,5 +16,7 @@ namespace fruit.Data
         public DbSet<Inventory> inventories { get; set; }
         public DbSet<contact> Contacts { get; set; }
         public DbSet<Accounts> accounts { get; set; }
+        public DbSet<Orders> order { get; set; }
+
     }
 }

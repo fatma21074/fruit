@@ -19,8 +19,8 @@ namespace fruit.Models
         [ForeignKey("CategoriesId")]
         public int CategoriesId { get; set; }
         public Categories categories { get; set; }
-        [ForeignKey("Accountsnum")]
-        public int phonenum { get; set; }
+        [ForeignKey("Accontphonenum")]
+        public int Accontphonenum { get; set; }
         public Accounts accounts { get; set; }
         [ForeignKey("InventoryId")]
         public int InventoryId { get; set; }

@@ -16,8 +16,8 @@ namespace fruit.Models
         public string itemspurchased { get; set; }
         public int quantities { get; set; }
         public int total { get; set; }
-        [ForeignKey("Accountnum")]
-        public int phonenum { get; set; }
+        [ForeignKey("Accontphonenum")]
+        public int Accontphonenum { get; set; }
         public Accounts accounts { get; set; }
     }
 }

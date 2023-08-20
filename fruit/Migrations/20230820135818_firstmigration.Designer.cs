@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using fruit.Data;
 
@@ -10,9 +11,11 @@ using fruit.Data;
 namespace fruit.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230820135818_firstmigration")]
+    partial class firstmigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -98,9 +101,6 @@ namespace fruit.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
 
-                    b.Property<int>("Accontphonenum")
-                        .HasColumnType("int");
-
                     b.Property<string>("Customer_name")
                         .IsRequired()
                         .HasMaxLength(100)
@@ -115,6 +115,9 @@ namespace fruit.Migrations
                     b.Property<string>("itemspurchased")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("phonenum")
+                        .HasColumnType("int");
 
                     b.Property<int>("quantities")
                         .HasColumnType("int");
@@ -145,9 +148,6 @@ namespace fruit.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("idproduct"));
 
-                    b.Property<int>("Accontphonenum")
-                        .HasColumnType("int");
-
                     b.Property<int>("CategoriesId")
                         .HasColumnType("int");
 
@@ -173,6 +173,9 @@ namespace fruit.Migrations
                     b.Property<string>("origin")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("phonenum")
+                        .HasColumnType("int");
 
                     b.Property<int>("price")
                         .HasColumnType("int");
@@ -203,9 +206,6 @@ namespace fruit.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("Accontphonenum")
-                        .HasColumnType("int");
-
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -221,6 +221,9 @@ namespace fruit.Migrations
                     b.Property<string>("message")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("phonenum")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
